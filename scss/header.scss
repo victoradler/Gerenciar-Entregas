@@ -1,0 +1,21 @@
+.header {
+  background-color: #c7c7c7;
+  padding: 20px;
+  margin-bottom: 30px; 
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 600px){
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+
+  @media (min-width: 600px) {
+    margin-bottom: 0px;
+  }
+}
+
