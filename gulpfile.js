@@ -16,14 +16,15 @@ function js(){
 }
 
 function css() {
-    return src('./scss/**/*.scss')
+    return src('./scss/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
     .pipe(cssnano())
+    .pipe(concat('styles.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(dest('.'))
 };
