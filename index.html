@@ -13,7 +13,7 @@
             <h1 class="title">Gerenciar Entregas</h1>
             <button 
                 type="button" 
-                class="btn btn-primary" 
+                class="btn btn-primary add-delivery" 
                 data-bs-toggle="modal" 
                 data-bs-target="#adicionarEntrega"
             >
@@ -33,26 +33,7 @@
                     <th scope="col">Operações</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>teste</td>
-                    <td>teste</td>
-                    <td>21/12/2021</td>
-                    <td>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-secondary">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </div>
-
-                    </td>
-                  </tr>
-                </tbody>
+                <tbody></tbody>
               </table>
         </div>
     </div>
@@ -72,21 +53,22 @@
             </div>
             <form class="modal-body">
                 <div class="mb-3">
-                    <label for="campo-titulo" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="campo-titulo" placeholder="">
+                    <label for="input-title" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="input-title" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="campo-descricao" class="form-label">Descrição</label>
-                    <input type="text" class="form-control" id="campo-descricao" placeholder="">
+                    <label for="input" class="form-label">Descrição</label>
+                    <input type="text" class="form-control" id="input-description" placeholder="">
                 </div>
                 <div class="mb-3">
-                    <label for="campo-entrega" class="form-label">Data de Entrega</label>
-                    <input type="date" class="form-control" id="campo-descricao" placeholder="">
+                    <label for="input-delivery-date" class="form-label">Data de Entrega</label>
+                    <input type="date" class="form-control" id="input-delivery-date" placeholder="">
                 </div>
             </form>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Salvar</button>
+              <button type="button" class="btn btn-primary save-delivery" data-bs-dismiss="modal">Salvar</button>
+              <button type="button" class="btn btn-primary save-edit-delivery hidden" data-bs-dismiss="modal">Salvar Edição</button>
             </div>
           </div>
         </div>
